@@ -1,0 +1,17 @@
+<div class="app">
+    <navbar></navbar>
+    <form>
+        <div>
+            <div class="metabar-block u-flex0 u-flexCenter">
+                <div class="u-flexCenter u-height65 u-xs-height56 u-paddingLeft8 u-paddingRight8">
+                    <button (ngSubmit)="blogPost()"
+                        class="button button--primary button--smaller button--withChrome u-accentColor--buttonNormal button--publish js-publishButton js-buttonRequiresPostId u-paddingLeft10 u-paddingRight10"
+                        data-action="show-prepublish" data-action-source="post_edit_prepublish" type="submit">
+                        <span class="js-publishDialogButtonText">Ready to publish?</span>
+                    </button>
+                </div>
+            </div>
+            <sg-editor></sg-editor>
+        </div>
+    </form>
+</div>

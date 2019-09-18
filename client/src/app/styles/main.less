@@ -1,0 +1,313 @@
+@import '../common/navbar/navbar.component.less';
+@import '../components/home/home.component.less';
+@import '../components/education/ed.component.less';
+@import '../components/portfolio/portfolio.component.less';
+@import '../components/login/login.component.less';
+@import '../components/contact/contact.component.less';
+@import '../components/blog/blog-preview/blog-preview.component.less';
+@import '../components/blog/blogpost/blogpost.component.less';
+@import '../components/profile/profile.component.less';
+@import '../components/blog/write/write.component.less';
+@import '../components/errors/error.component.less';
+@import '../components/blog/write/editor/editor.component.less';
+@import '../components/reg/reg.component.less';
+
+@import "../common/banners/returnbutton/returnbutton.component.less";
+
+@import (inline) '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+@import (inline) '../../../../node_modules/font-awesome/css/font-awesome.min.css';
+@import (inline) '../../../../node_modules/@mdi/font/css/materialdesignicons.min.css';
+
+// @import (inline) '../../../node_modules/quill/dist/quill.core.css';
+// @import (inline) '../../../node_modules/quill/dist/quill.snow.css';
+// @import (inline) '../../../node_modules/quill/dist/quill.bubble.css';
+
+@import (inline) "../../../../node_modules/suitcss-utils-flex/index.css";
+
+@import './materialdesignicons.less';
+
+
+
+    .app{
+        height: 100vh;
+        width: 100vw;
+        z-index: 1000000;
+        // position: absolute;
+        background-color: white;
+    }
+
+
+
+    .easterEgg{
+        color: #fff;
+    }
+
+    .btn-padding{
+        padding-top: 20px;
+    }
+
+    .bg-custom {
+        background-color: #2b3a42!important;
+    }
+
+    .head-ctm{
+        background-color: #2b3a42!important;
+        color:#fff;
+    }
+
+    @media(min-width:1149px){
+        .core-pad { 
+            padding-top: 50px;
+            padding-bottom: 75px;  
+        }
+
+        social-component.home{
+            position: relative;
+            display: flex;
+
+            .social-container-mobile{
+                display: none;
+            }
+        
+            .social-container {
+                z-index: 100000;
+                position: absolute;
+                width: 100%;
+                justify-content: center;
+                display: inline-flex;
+        
+                .importantpos{
+                    display: flex;
+                    justify-content: space-evenly;
+                    padding-top: 20px;
+                    width: 100%;
+        
+                    a.socicon{
+                        color:#fff;
+                        text-decoration: none; 
+                    }
+                    a.pdf{
+                        color:#fff;
+                        text-decoration: none;
+        
+                    }
+                }
+            }
+        }
+
+        social-component.normalIcons {
+
+            .social-container-mobile{
+                display: none;
+            }
+
+            a.sociconMobile{
+                color:#2b3a42!important;
+                text-decoration: none;
+            }
+        
+            a.socicon{
+                color:#2b3a42!important;
+                text-decoration: none; 
+            }
+            a.pdf{
+                color:#2b3a42!important;
+                text-decoration: none;
+
+            }
+        
+        }
+    
+
+        .mottoposMobile{
+            display: none;
+            a.socionMobile{
+                display: none;
+            }
+        }
+        .importantpos{
+            display: flex;
+            justify-content: space-around;
+            padding-top:20px;
+            .paddingLeft{
+                padding-left: 150px;
+            }
+            .paddingRight{
+                padding-right: 150px;
+            }
+        }
+    }
+    @media(min-width:992px) and (max-width: 1148px){
+        .core-pad { 
+            padding-top: 50px;
+            padding-bottom: 75px;  
+        }
+
+        social-component.home{
+            position: relative;
+            display: flex;
+
+            .social-container-mobile{
+                display: none;
+            }
+        
+            .social-container {
+                z-index: 100000;
+                position: absolute;
+                width: 100%;
+                justify-content: center;
+                display: inline-flex;
+        
+                .importantpos{
+                    display: flex;
+                    justify-content: space-evenly;
+                    padding-top: 20px;
+                    width: 100%;
+        
+                    a.socicon{
+                        color:#fff;
+                        text-decoration: none; 
+                    }
+                    a.pdf{
+                        color:#fff;
+                        text-decoration: none;
+        
+                    }
+                }
+            }
+        }
+
+        social-component.normalIcons {
+
+            .social-container-mobile{
+                display: none;
+            }
+
+            a.sociconMobile{
+                color:#2b3a42!important;
+                text-decoration: none;
+            }
+
+            a.socicon{
+                color:#2b3a42!important;
+                text-decoration: none; 
+            }
+            a.pdf{
+                color:#2b3a42!important;
+                text-decoration: none;
+
+            }
+        
+            // .social-container{
+            //     display: none;
+            // }
+        
+        }
+        
+        .mottoposMobile{
+            display: none;
+            a.socionMobile{
+                display: none;
+            }
+        }
+        .importantpos{
+            display: flex;
+            justify-content: space-around;
+            padding-top:20px;
+            .paddingLeft{
+                padding-left: 150px;
+            }
+            .paddingRight{
+                padding-right: 150px;
+            }
+        }
+    }
+    @media(max-width:991px){
+        .core-pad { 
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        social-component.home{
+            position: relative;
+            display: flex;
+        
+            .social-container-mobile {
+                z-index: 100000;
+                position: absolute;
+                width: 100%;
+                justify-content: center;
+                display: inline-flex;
+                flex-direction: column;
+                a.sociconMobile{
+                    color:#fff;
+                    text-decoration: none;
+                }
+            }
+    
+            .pdf-container-mobile {
+                position: relative;
+                justify-content: center;
+                display: flex;  
+                a.pdf{
+                    color:#fff;
+                    text-decoration: none;
+            
+                }
+            }
+            .social-container{
+                display: none;
+            }
+        }
+
+        social-component.normalIcons{
+            display: flex;
+        
+            .social-container-mobile {
+                z-index: 100000;
+                width: 100%;
+                justify-content: center;
+                display: inline-flex;
+                flex-direction: column;
+                a.sociconMobile{
+                    color:#2b3a42!important;
+                    text-decoration: none;
+                }
+            }
+    
+            .pdf-container-mobile {
+                justify-content: center;
+                display: flex;  
+                a.pdf{
+                    color:#2b3a42!important;
+                    text-decoration: none;
+            
+                }
+            }
+            .social-container{
+                display: none;
+            }
+        }
+
+        .mottoposMobile{
+            display: flex;
+            justify-content: space-around;
+            padding-top: 15px;
+        }
+        .importantpos{
+            display: flex;
+            justify-content: space-around;
+            padding-top:20px;
+            .paddingLeft{
+                display: none
+            }
+            .paddingRight{
+                display: none
+            }
+            a.socicon{
+                display: none; 
+            }
+        }
+
+    }

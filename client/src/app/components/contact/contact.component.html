@@ -1,0 +1,93 @@
+<div class="app">
+    <navbar></navbar>
+    <div class="core-pad">
+        <div class="socialpos">
+            <div class="container social-padding">
+                <div class="card panel-default head-ctm">
+                    <div class="iconpadding head-ctm">
+                        <div class="iconpos">
+                            <a class="socicon" href="" rel="nofollow">
+                                <i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i>
+                            </a>
+                            <a class="socicon" href="" rel="nofollow">
+                                <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+                            </a>
+                            <a class="socicon" href="" rel="nofollow">
+                                <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+                            </a>
+                            <a class="socicon" href="" rel="nofollow">
+                                <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contactpos">
+            <div class="container">
+
+                <!-- Form when not complete -->
+                <div *ngIf="showForm" class="card panel-default">
+                    <div class="card-header head-ctm">
+                        <h2 class="card-title">Contact Me</h2>
+                    </div>
+                    <div class="card-body">
+                        <form #contactForm="ngForm" method="POST" action="/contact" (ngSubmit)="onSubmit(contactForm)"
+                            id="inputform">
+                            <div class="form-group">
+                                <input type="text" name="_gotcha" style="display: none">
+                                <!--<label>Contact</label>
+                                <select class="form-control" required>{{user.email}}</select>-->
+                                <fieldset>
+                                    <label for="firstName">First Name</label>
+                                    <input class="form-control" type="text" id="firstName" name="firstName" ngModel
+                                        required #firstName="ngModel">
+                                    <label for="lastName">Last Name</label>
+                                    <input class="form-control" type="text" id="lastName" name="lastName" ngModel
+                                        required #lastName="ngModel">
+                                    <label for="email">Email</label>
+                                    <div class="form-group" [ngClass]="{ 'has-error': submitted && !valid }">
+                                        <input class="form-control" id="email" type="email" name="email" ngModel
+                                            required #email="ngModel">
+                                        <p *ngIf="errors && errors.uniqueUsername">Email is not valid</p>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <label for="subject">Subject</label>
+                                    <input class="form-control" id="subject" type="text" name="subject" ngModel required
+                                        #subject="ngModel">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="6" required
+                                        ngModel></textarea>
+                                </fieldset>
+                                <div class="btn-padding">
+                                    <button class="btn btn-secondary head-ctm" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Form when not complete end -->
+                <!-- Form when sucesully sent -->
+                <div *ngIf="showSuccessMsg">
+                    <div class="offset-md-3 col-md-8">
+                        <h1>Message has sucessfully been sent</h1>
+                    </div>
+                </div>
+                <!-- Form when sucesully sent end-->
+                <!-- Error when sending form -->
+                <div *ngIf="showErrorMsg">
+                    <div class="offset-md-3 col-md-7">
+                        <h1>Oops!! Something is going wrong!!</h1>
+                    </div>
+                    <div class="offset-md-3 col-md-7">
+                        <h1>Please refresh page and try again</h1>
+                    </div>
+                </div>
+                <!-- Error when sending form -->
+
+            </div>
+        </div>
+    </div>
+    <return-button class="hidden-btn"></return-button>
+</div>

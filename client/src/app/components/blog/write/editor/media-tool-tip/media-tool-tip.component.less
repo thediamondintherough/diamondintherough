@@ -1,0 +1,60 @@
+.inlineTooltip {
+	position: absolute;
+	top: 0;
+	margin-left: -58px;
+	margin-top: 5px;
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	z-index: 400;
+	transition: visibility 0s linear 250ms,opacity .1s,width 0s linear 250ms;
+	visibility: hidden;
+	opacity: 0;
+}
+.inlineTooltip.is-active {
+	transition: visibility 0s linear 0s,opacity .1s,width 0s linear 0s;
+	visibility: visible;
+	opacity: 1;
+}
+.inlineTooltip.is-scaled {
+	width: 220px;
+	transition-delay: 0;
+	>.button--inlineTooltipControl {
+		transition: transform 250ms;
+		transform: rotate(45deg);
+	}
+	.inlineTooltip-menu {
+		visibility: visible;
+	}
+}
+.button--inlineTooltipControl {
+	transform: rotate(0);
+	transition: transform .1s;
+}
+.inlineTooltip-menu {
+	display: inline-block;
+	visibility: hidden;
+	padding-left: 22px;
+	.button {
+		margin-right: 9px;
+	}
+}
+.inlineTooltip.is-menuImmediatelyHidden {
+	.inlineTooltip-menu {
+		display: none;
+	}
+}
+
+div.inlineTooltip-menu{
+    
+    button{
+        span{
+            svg{
+            width: 25px;
+            height: 25px;
+            }
+        }
+    }
+
+
+}

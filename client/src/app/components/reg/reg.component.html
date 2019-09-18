@@ -1,0 +1,58 @@
+<div class="app">
+    <navbar></navbar>
+    <div class="core-pad">
+        <div class="container">
+            <div class=" card panel-default">
+                <div class="card-header head-ctm">
+                    <h2 class="card-title">Registration</h2>
+                </div>
+                <div class="card-body">
+                    <form #registration="ngForm" (ngSubmit)="onSubmit(registration)" name="registration"
+                        novalidate="novalidate">
+                        <div class="form-group" [ngClass]="{ 'has-error': username.submitted && !username.valid }">
+                            <label for="username">Username</label>
+                            <input class="form-control" type="text" name="username" [(ngModel)]="user.username"
+                                required="required" unique-username="unique-username" #username="ngModel" />
+                            <p *ngIf="username.errors && username.errors.uniqueUsername">Username has been taken. Choose
+                                a
+                                different Username</p>
+                        </div>
+                        <div class="form-group" [ngClass]="{ 'has-error': firstName.submitted && !firstName.valid }">
+                            <label for="firstName">First Name</label>
+                            <input class="form-control" type="text" name="firstName" [(ngModel)]="user.firstName"
+                                required="required" #firstName="ngModel" />
+                        </div>
+                        <div class="form-group" [ngClass]="{ 'has-error': lastName.submitted && !lastName.valid }">
+                            <label for="lastName">Last Name</label>
+                            <input class="form-control" type="text" name="lastName" [(ngModel)]="user.lastName"
+                                required="required" #lastName="ngModel" />
+                        </div>
+                        <div class="form-group" [ngClass]="{ 'has-error': email.submitted && !email.valid }">
+                            <label for="email">Email Address</label>
+                            <input class="form-control" type="email" name="email" [(ngModel)]="user.email"
+                                required="required" #email="ngModel" />
+                            <p *ngIf="email.errors && email.errors.email">Must be an email address.</p>
+                        </div>
+                        <div class="form-group" [ngClass]="{ 'has-error': password.submitted && !password.valid }">
+                            <label for="password">Password</label>
+                            <input class="form-control" type="password" name="password" [(ngModel)]="user.password"
+                                required="required" #password="ngModel" />
+                            <label for="passwordConfirm">Confirm Password</label>
+                            <input class="form-control" type="password" name="passwordConfirm"
+                                [(ngModel)]="user.passwordConfirm" registration-password-match="password"
+                                #password="ngModel" />
+                        </div>
+                        <!-- <div *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</div> -->
+                        <div class="btn-padding">
+                            <button class="btn button-color-1" type="submit"
+                                [disabled]="!registration.valid">Register!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--<pre>user = {{ user | json }}</pre>
+        <pre>registration = {{ registration | json }}</pre>-->
+    </div>
+    <return-button class="hidden-btn"></return-button>
+</div>

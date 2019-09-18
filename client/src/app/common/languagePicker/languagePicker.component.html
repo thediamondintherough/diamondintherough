@@ -1,0 +1,16 @@
+<div id="language-picker-pushpin" class="pinned">	
+    {{'LanguagePickerComponent-LANGUAGE_TEXT'| translate}}
+    <a class='dropdown-button selected-language' data-activates='language-picker'>
+	{{selectedLanguage.name}}
+    </a>
+
+    <ng-template [ngIf]="selectedLanguage">
+	<ul id='language-picker' class='dropdown-content'>
+	    <li *ngFor="let language of languages"
+		(click)="changeLangTo(language)"
+		[ngClass]="{'active' : language.languageCode === selectedLanguage.languageCode }">
+		{{language.name}}
+	    </li>
+	</ul>
+    </ng-template>
+</div>

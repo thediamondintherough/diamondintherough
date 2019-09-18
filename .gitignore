@@ -1,0 +1,20 @@
+node_modules
+coverage
+npm-debug.log
+.env
+dump.rdb
+
+# OSX Folder Attributes
+.DS_Store
+
+# Map files
+src/**/*.js
+*.css
+*.map
+
+# Distribution files
+public/dist
+public/assets/i18n
+public/assets/images
+public/fonts
+dist/

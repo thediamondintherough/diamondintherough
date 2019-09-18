@@ -1,0 +1,75 @@
+<div class="app">
+    <navbar></navbar>
+    <div class="container">
+        <div class="blogPadd">
+            <div class="blogTop card panel-default">
+                <div class="card-header head-ctm">
+                    <h2 class="card-title">Blog of the
+                        <label title="Dog Samurai">犬の武士</label>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="items; else noItems" class="container">
+        <div class="row">
+            <section>
+                <article>
+                    <div class="col-md-9 col-md-pull-3 col-sm-12">
+                        <div class="content">
+                            <div class="content-post page-content clearfix">
+                                <div class="author">
+                                    <div class="author-options">
+                                        <p>
+                                            Posted by {{data.user.username}}
+                                        </p>
+                                        <div class="time">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-title">
+                                    <a href="#">
+                                        <h3>{{data.blog.title}}</h3>
+                                    </a>
+                                </div>
+                                <div class="post-content">
+                                    <p>{{data.blog.preview}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <div class="col-md-3 col-md-push-9 col-sm-12">
+                    <div class="sidebar">
+                        <div class="sidebar-header">
+                            <h2>Previous Post</h2>
+                            <div class="sidebar-posts">
+                                <div class="sidebar-post">
+                                    <a href="#" class="sidebar-post-head">
+                                        Roy Moore walks off set after ‘Who Is America’ interview goes south
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <hr>
+        <!-- Page Turner -->
+        <ul class="pager">
+            <li class="next">
+                <a href="#">Older Posts &rarr;</a>
+            </li>
+        </ul>
+    </div>
+    <ng-template #noItems>
+        <div class="no-post">
+            <p>No Blog Post</p>
+        </div>
+    </ng-template>
+    <return-button class="hidden-btn"></return-button>
+</div>

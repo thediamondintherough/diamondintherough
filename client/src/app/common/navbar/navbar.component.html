@@ -1,0 +1,42 @@
+<nav class="navbar container-fluid navbar-dark navbar-expand-lg bg-custom" id="headNav nav-color" role="navigation">
+    <a class="navbar-brand" routerLink="/">
+        <span class="logotext">{{ data['Navbar-Brand'] }}</span>
+    </a>
+    <button type="button" class="navbar-toggler collapsed pull-right" (click)="isCollapsed = !isCollapsed" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="navbar-collapse collapse bg-custom" [collapse]="!isCollapsed">
+        <ul class="nav navbar-nav ml-auto" id="navbarSupportedContent">
+            <li class="nav-item">
+                <a class="mobile nav-link" routerLink="/" routerLinkActive="active">{{ data['Navigate-Home'] }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="mobile nav-link" routerLink="/education" routerLinkActive="active">{{ data['Navigate-Education'] }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="mobile nav-link" routerLink="/portfolio" routerLinkActive="active">{{ data['Navigate-Portfolio'] }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="mobile nav-link" routerLink="/blog-preview" routerLinkActive="active">{{ data['Navigate-Blog'] }}</a>
+            </li>
+            <li class="nav-item" [ngClass]="{'hidden': isUserLoggedIn()}">
+                <a class="mobile nav-link" routerLink="/login" routerLinkActive="active">{{ data['Navigate-Login'] }}</a>
+            </li>
+            <li class="nav-item" [ngClass]="{'hidden': !isUserLoggedIn()}">
+                <a class="mobile nav-link" routerLink="/profile" routerLinkActive="active">
+                    <i class="fa fa-user fa-1x" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="nav-item" [ngClass]="{'hidden': !isUserLoggedIn()}">
+                <a class="mobile nav-link" routerLink="/write" routerLinkActive="active">{{ data['Navigate-Write'] }}</a>
+            </li>
+            <li class="nav-item" [ngClass]="{'hidden': !isUserLoggedIn()}">
+                <a class="mobile nav-link" routerLink="/" routerLinkActive="active" (click)="logout()">{{ data['Navigate-Logout'] }}</a>
+            </li>
+            <li class="nav-item" [ngClass]="{'hidden': isUserLoggedIn()}">
+                <a class="mobile nav-link" routerLink="/contact" routerLinkActive="active">{{ data['Navigate-Contact'] }}</a>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,25 @@
+{
+    "---------------- THIS IS A COMMENT : Navbar (TBT)  -------------": "",
+    "Navbar-Brand":"晴天闘牙丸 Ethan Fairweather",
+    "Navigate-Home":"ホーム",
+    "Navigate-Education":"Education",
+    "Navigate-Portfolio":"作品リスト",
+    "Navigate-Blog":"ブログ",
+    "Navigate-Login":"ログイン",
+    "Navigate-Write":"刻する",
+    "Navigate-Logout":"ログアウト",
+    "Navigate-Contact":"お問い合わせ",
+
+    "---------------- THIS IS A COMMENT : SubNavbar (TBT)  -------------": "",
+    "Subnavigate-Blog":"晴天さんのブログ",
+    "Subnavigate-Endorsing":"",
+
+    "---------------- THIS IS A COMMENT : Page Not Found  (TBT)  -------------": "",
+    "PageNotFound-ERROR_TEXT": "404 - ページが見つかりません。",
+
+
+    "---------------- THIS IS A COMMENT : Errors  (TBT)  -------------": "",
+    "ErrorCodes-GENERIC_TITLE": "エラーメッセージ",
+    "ErrorCodes-GENERIC_UNKNOWN": "不明なエラーが起こりました",
+    "ErrorCodes-GENERIC_FORBIDDEN": "アクセスは拒します"
+}

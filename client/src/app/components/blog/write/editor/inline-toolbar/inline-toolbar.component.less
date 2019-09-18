@@ -1,0 +1,202 @@
+@color_13: #fff;
+@color_33: #a93f7f;
+
+
+.highlightMenu {
+	position: absolute;
+	visibility: hidden;
+	display: none;
+	z-index: 500;
+	transition: none;
+	top: 0;
+	left: 0;
+	.highlightMenu-arrowClip {
+		position: absolute;
+		bottom: -10px;
+		left: 50%;
+		clip: rect(10px 20px 20px 0);
+		margin-left: -10px;
+		.highlightMenu-arrow {
+			display: block;
+			width: 20px;
+			height: 20px;
+			background-color: @background_color_33;
+			transform: rotate(45deg) scale(.5);
+		}
+	}
+}
+.highlightMenu--quoteResponses {
+	z-index: 800;
+}
+.highlightMenu-inner {
+	position: relative;
+	background-image: linear-gradient(to bottom,rgba(49,49,47,.99),#262625);
+	background-repeat: repeat-x;
+	border-radius: 5px;
+}
+.button--highlightMenu {
+	display: inline-block;
+	border: 0;
+	color: @color_13;
+	box-sizing: content-box;
+	vertical-align: center;
+	.svgIcon {
+		margin-top: -3px;
+	}
+}
+.button.button--highlightMenu {
+	.svgIcon {
+		fill: #fff;
+	}
+}
+.button--highlightMenu.is-active {
+	.svgIcon {
+		fill: #48e79a;
+	}
+	.svgIcon--blockquote {
+		fill: #fff;
+	}
+	.svgIcon--tt {
+		fill: #fff;
+	}
+}
+.button--highlightMenu.button--withSvgIcon {
+	.svgIcon {
+		margin-left: -3px;
+		margin-right: -3px;
+	}
+	.svgIcon--highlighter {
+		margin-left: -7px;
+		margin-right: -7px;
+	}
+	.svgIcon--italic {
+		margin-left: -9px;
+		margin-right: -9px;
+	}
+}
+.buttonSet-separator {
+	display: inline-block;
+	vertical-align: middle;
+	width: 1px;
+	margin: 0 6px;
+	height: 24px;
+	background: rgba(255,255,255,.2);
+}
+.highlightMenu.is-flushTop {
+	.highlightMenu-arrowClip {
+		display: none;
+	}
+}
+.button--highlightMenu.is-blockquoteMode {
+	.svgIcon--blockquote {
+		path {
+			&:nth-child(1) {
+				fill: #48e79a;
+			}
+		}
+	}
+}
+.button--highlightMenu.is-pullquoteMode {
+	.svgIcon--blockquote {
+		fill: #48e79a;
+	}
+}
+.button--highlightMenu.is-h4Mode {
+	.svgIcon--tt {
+		path {
+			&:nth-child(1) {
+				fill: #48e79a;
+			}
+		}
+	}
+}
+.button--highlightMenu.is-h3Mode {
+	.svgIcon--tt {
+		fill: #48e79a;
+	}
+}
+.highlightMenu-linkinput {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	>.button {
+		position: absolute;
+		top: 0;
+		right: 10px;
+		bottom: -3px;
+	}
+}
+.highlightMenu-linkinputField {
+	background: rgba(0,0,0,0);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 13px 40px 11px 10px;
+	color: @color_13;
+	border: none;
+	outline: 0;
+	font-size: 14px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-family: @font_family_3;
+	letter-spacing: 0;
+	font-weight: 400;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: "liga" on;
+}
+.highlightMenu--linkMode {
+	.buttonSet {
+		visibility: hidden;
+	}
+	.highlightMenu-linkinput {
+		display: block;
+		animation: pop-upwards 180ms forwards linear;
+	}
+}
+.highlightMenu--measure {
+	display: inline-block;
+	visibility: hidden;
+}
+.highlightMenu--active {
+	display: inline-block;
+	visibility: visible;
+	transition: top 75ms ease-out,left 75ms ease-out;
+	animation: pop-upwards 180ms forwards linear;
+}
+
+div.highlightMenu{
+    div.highlightMenu-inner{
+        div.buttonSet{
+            button{
+                span.svgIcon--21px{
+                    svg{
+                    width: 21px; 
+                    height: 21px;
+                    }
+                }
+                span.svgIcon--25px{
+                    svg{
+                    width: 21px; 
+                    height: 21px;
+                    }
+                }
+                span.svgIcon--19px{
+                    svg{
+                    width: 19px; 
+                    height: 19px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+<div class="app">
+    <navbar></navbar>
+    <div class="core-pad lpadding">
+        <div class="loginpos">
+            <div class="container">
+                <div class="card panel-default">
+                    <div class="card-header head-ctm">
+                        <h2 class="card-title">Blog Login</h2>
+                    </div>
+                    <div class="card-body">
+                        <form #login="ngForm">
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input class="form-control" [(ngModel)]="user.username" type="text" name="username" required>
+                                <label>Password</label>
+                                <input class="form-control" [(ngModel)]="user.password" type="password" name="password" required>
+                                <div class="btn-padding">
+                                    <button class="btn btn-secondary head-ctm" (click)="loginUser()" type="submit">Login</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <return-button class="hidden-btn"></return-button>
+</div>

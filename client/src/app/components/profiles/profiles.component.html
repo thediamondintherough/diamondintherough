@@ -1,0 +1,36 @@
+<div class="app">
+    <navbar></navbar>
+    <div class="container">
+        <div class="blogPadd">
+            <div class="blogTop panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Users of the
+                        <label title="Dog Samurai">犬の武士</label>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div ng-repeat="data in items">
+            <div class="">
+                <p>
+                    Posted by {{data.user.username}}
+                </p>
+            </div>
+            <div class="">
+                <a href="/#/blog/{{item.objectId}}">
+                    <p>{{data.blog.title}}</p>
+                </a>
+                <p>{{data.blog.type}} on {{data.blog.createdAt | date}}</p>
+            </div>
+        </div>
+        <hr>
+        <!-- Page Turner -->
+        <ul class="pager">
+            <li class="next">
+                <a href="#">Older Posts &rarr;</a>
+            </li>
+        </ul>
+    </div>
+</div>

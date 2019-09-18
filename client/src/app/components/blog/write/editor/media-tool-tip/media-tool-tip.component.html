@@ -1,0 +1,44 @@
+<div class="inlineTooltip buttonScalableGroup is-active" style="top: 1136px; left: 354px;">
+  <button
+    class="button button--small button--circle button--dark button--withChrome u-baseColor--buttonDark button--withIcon button--withSvgIcon button--inlineTooltipControl js-inlineTooltipControl"
+    title="Add an image, video, embed, or new part" aria-label="Add an image, video, embed, or new part"
+    data-action="inline-menu" tabindex="-1">
+    <span class="svgIcon svgIcon--addMediaPlus svgIcon--25px">
+      <img class="svgIcon-use" src="../assets/images/toggle.svg"/>
+    </span>
+  </button>
+  <div class="inlineTooltip-menu">
+    <button
+      class="button button--small button--circle button--dark button--withChrome u-baseColor--buttonDark button--withIcon button--withSvgIcon button--scale u-transitionSeries"
+      ng2FileDrop [uploader]="uploader" (fileOver)="fileOverBase($event)"
+      [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" title="Add an image" aria-label="Add an image"
+      data-action="inline-menu-image" tabindex="-1">
+      <span class="svgIcon svgIcon--addMediaImage svgIcon--25px">
+        <img class="svgIcon-use" src="../assets/images/photo-upload.svg"/>
+      </span>
+    </button>
+    <button
+      class="button button--small button--circle button--dark button--withChrome u-baseColor--buttonDark button--withIcon button--withSvgIcon button--scale u-transitionSeries"
+      title="Add a video" aria-label="Add a video" data-action="inline-menu-embed"
+      data-action-value="Paste a YouTube, Vine, Vimeo, or other video link, and press Enter" tabindex="-1"><span
+        class="svgIcon svgIcon--addMediaVideo svgIcon--25px">
+        <img class="svgIcon-use" src="../assets/images/video-link.svg"/>
+      </span>
+    </button>
+    <button
+      class="button button--small button--circle button--dark button--withChrome u-baseColor--buttonDark button--withIcon button--withSvgIcon button--scale u-transitionSeries"
+      title="Add an embed" aria-label="Add an embed" data-action="inline-menu-embed"
+      data-action-value="Paste a link to embed content from another site (e.g. Twitter) and press Enter" tabindex="-1">
+      <span class="svgIcon svgIcon--addMediaEmbed svgIcon--25px">
+        <img class="svgIcon-use" src="../assets/images/embedded-link.svg" />
+      </span>
+    </button>
+    <button
+      class="button button--small button--circle button--dark button--withChrome u-baseColor--buttonDark button--withIcon button--withSvgIcon button--scale u-transitionSeries"
+      title="Add a new part" aria-label="Add a new part" data-action="inline-menu-hr" tabindex="-1"><span
+        class="svgIcon svgIcon--addMediaPart svgIcon--25px">
+        <img class="svgIcon-use" src="../assets/images/new-section.svg"/>
+      </span>
+    </button>
+  </div>
+</div>

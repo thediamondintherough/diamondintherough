@@ -1,0 +1,25 @@
+{
+    "---------------- THIS IS A COMMENT : Navbar (TBT)  -------------": "",
+    "Navbar-Brand":"晴天エタン Ethan Fairweather",
+    "Navigate-Home":"Home",
+    "Navigate-Education":"Education",
+    "Navigate-Portfolio":"Portfolio",
+    "Navigate-Blog":"Blog",
+    "Navigate-Login":"Login",
+    "Navigate-Write":"Write",
+    "Navigate-Logout":"Logout",
+    "Navigate-Contact":"Contact",
+
+    "---------------- THIS IS A COMMENT : SubNavbar (TBT)  -------------": "",
+    "Subnavigate-Blog":"犬の大将's Blog",
+    "Subnavigate-Endorsing":"",
+
+    "---------------- THIS IS A COMMENT : Page Not Found Component  (TBT)  -------------": "",
+    "PageNotFoundComponent-ERROR_TEXT": "Error 404 - Page Not Found",
+
+    
+    "---------------- THIS IS A COMMENT : Errors  (TBT)  -------------": "",
+    "ErrorCodes-GENERIC_TITLE": "Error",
+    "ErrorCodes-GENERIC_UNKNOWN": "Unknown error occurred",
+    "ErrorCodes-GENERIC_FORBIDDEN": "Access denied"
+}
